@@ -1,0 +1,186 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    radial-gradient(circle at top right,#8b5cf6 0%,transparent 35%),
+    radial-gradient(circle at bottom left,#06b6d4 0%,transparent 35%),
+    #0f172a;
+}
+
+.card{
+
+    width:320px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        145deg,
+        #1e293b,
+        #0f172a
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:24px;
+
+    padding:180px 25px 25px;
+
+    box-shadow:
+        0 25px 50px rgba(0,0,0,.5);
+
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120px;
+    left:-80px;
+
+    width:250px;
+    height:250px;
+
+    background:
+        radial-gradient(
+            rgba(139,92,246,.4),
+            transparent 70%
+        );
+
+    pointer-events:none;
+}
+
+.card img{
+
+    position:absolute;
+
+    top:20px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:180px;
+
+    filter:
+        drop-shadow(0 10px 20px rgba(0,0,0,.4));
+
+    transition:.3s;
+}
+
+.card:hover img{
+    transform:
+        translateX(-50%)
+        scale(1.08);
+}
+
+.container{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.title h1{
+
+    color:white;
+
+    font-size:28px;
+
+    margin-bottom:6px;
+
+    font-weight:700;
+}
+
+.title p{
+
+    color:#94a3b8;
+
+    font-size:15px;
+}
+
+#poison{
+
+    background:
+        linear-gradient(
+            135deg,
+            #9333ea,
+            #c026d3
+        );
+
+    color:white;
+
+    font-weight:600;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+}
+
+#BTN{
+
+    width:90px;
+    height:90px;
+
+    border:none;
+
+    border-radius:50%;
+
+    margin-left:20px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:16px;
+    font-weight:700;
+
+    background:
+        linear-gradient(
+            135deg,
+            #3b82f6,
+            #06b6d4
+        );
+
+    box-shadow:
+        0 10px 25px rgba(59,130,246,.35);
+
+    transition:.3s;
+}
+
+#BTN:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:
+        0 15px 35px rgba(59,130,246,.45);
+}
+
+#BTN:active{
+    transform:scale(.95);
+}
